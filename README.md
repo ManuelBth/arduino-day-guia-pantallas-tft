@@ -15,7 +15,7 @@
 
 ## Introduccion
 
-Este proyecto surge como material educativo para el **Arduino Day 2026**, con el objetivo de democratizar el uso de pantallas TFT en proyectos embebidos. Durante anos, las interfaces graficas en microcontroladores han sido consideradas un terreno exclusivo para expertos, pero con herramientas como **LVGL** y **EEZ Studio**, cualquier persona con conocimientos basicos de programacion puede crear interfaces profesionales.
+Este proyecto surge como material educativo para el **Arduino Day 2026**, con el objetivo de democratizar el uso de pantallas TFT en proyectos embebidos. Durante años, las interfaces graficas en microcontroladores han sido consideradas un terreno exclusivo para expertos, pero con herramientas como **LVGL** y **EEZ Studio**, cualquier persona con conocimientos basicos de programacion puede crear interfaces profesionales.
 
 ### Por que este proyecto?
 
