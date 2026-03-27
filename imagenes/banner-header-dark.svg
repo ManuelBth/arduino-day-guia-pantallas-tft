@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200">
+  <defs>
+    <!-- Background gradient - dark tech theme -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#0d1b2a"/>
+      <stop offset="100%" style="stop-color:#0a0e1a"/>
+    </linearGradient>
+    
+    <!-- Teal gradient for accents -->
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:0"/>
+      <stop offset="30%" style="stop-color:#00d4aa;stop-opacity:1"/>
+      <stop offset="70%" style="stop-color:#00bfff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#00bfff;stop-opacity:0"/>
+    </linearGradient>
+    
+    <!-- Orange gradient for signals -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#ff6b35;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:0"/>
+    </linearGradient>
+    
+    <!-- Glow filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="subtleGlow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Circuit board pattern -->
+    <pattern id="circuit" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M15 15h30v8h-30zM15 35h8v15h-8zM45 30v15M40 30h15v8h-15z" stroke="#00979D" stroke-width="1" fill="none" opacity="0.2"/>
+      <circle cx="52" cy="52" r="2.5" fill="#00979D" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="200" fill="url(#bgGrad)"/>
+  <rect width="1200" height="200" fill="url(#circuit)"/>
+
+  <!-- PCB traces - left side -->
+  <g opacity="0.15" filter="url(#subtleGlow)">
+    <polyline points="0,40 60,40 60,70 100,70 100,40 140,40" fill="none" stroke="#00d4aa" stroke-width="1.5"/>
+    <circle cx="60" cy="40" r="3" fill="#00d4aa"/>
+    <circle cx="100" cy="70" r="3" fill="#00d4aa"/>
+    <circle cx="140" cy="40" r="3" fill="#00d4aa"/>
+    
+    <polyline points="0,160 40,160 40,130 80,130" fill="none" stroke="#00d4aa" stroke-width="1.5"/>
+    <circle cx="40" cy="160" r="3" fill="#00d4aa"/>
+    <circle cx="80" cy="130" r="3" fill="#00d4aa"/>
+  </g>
+
+  <!-- PCB traces - right side -->
+  <g opacity="0.15" filter="url(#subtleGlow)">
+    <polyline points="1200,40 1140,40 1140,70 1100,70 1100,40 1060,40" fill="none" stroke="#00bfff" stroke-width="1.5"/>
+    <circle cx="1140" cy="40" r="3" fill="#00bfff"/>
+    <circle cx="1100" cy="70" r="3" fill="#00bfff"/>
+    <circle cx="1060" cy="40" r="3" fill="#00bfff"/>
+    
+    <polyline points="1200,160 1160,160 1160,130 1120,130" fill="none" stroke="#00bfff" stroke-width="1.5"/>
+    <circle cx="1160" cy="160" r="3" fill="#00bfff"/>
+    <circle cx="1120" cy="130" r="3" fill="#00bfff"/>
+  </g>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#tealGrad)" opacity="0.9"/>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="197" width="1200" height="3" fill="url(#tealGrad)" opacity="0.9"/>
+
+  <!-- Left vertical accent -->
+  <rect x="0" y="0" width="4" height="200" fill="#00d4aa" opacity="0.5"/>
+
+  <!-- Right vertical accent -->
+  <rect x="1196" y="0" width="4" height="200" fill="#00bfff" opacity="0.5"/>
+
+  <!-- Corner brackets - top left -->
+  <g stroke="#00d4aa" stroke-width="2" fill="none" opacity="0.9" filter="url(#glow)">
+    <polyline points="20,8 8,8 8,25"/>
+  </g>
+
+  <!-- Corner brackets - top right -->
+  <g stroke="#00bfff" stroke-width="2" fill="none" opacity="0.9" filter="url(#glow)">
+    <polyline points="1180,8 1192,8 1192,25"/>
+  </g>
+
+  <!-- Corner brackets - bottom left -->
+  <g stroke="#00d4aa" stroke-width="2" fill="none" opacity="0.9" filter="url(#glow)">
+    <polyline points="20,192 8,192 8,175"/>
+  </g>
+
+  <!-- Corner brackets - bottom right -->
+  <g stroke="#00bfff" stroke-width="2" fill="none" opacity="0.9" filter="url(#glow)">
+    <polyline points="1180,192 1192,192 1192,175"/>
+  </g>
+
+  <!-- Signal dots - left -->
+  <g fill="#ff6b35" opacity="0.8" filter="url(#subtleGlow)">
+    <circle cx="200" cy="100" r="3"/>
+    <circle cx="214" cy="100" r="2.2"/>
+    <circle cx="225" cy="100" r="1.5"/>
+  </g>
+
+  <!-- Signal dots - right -->
+  <g fill="#ff6b35" opacity="0.8" filter="url(#subtleGlow)">
+    <circle cx="1000" cy="100" r="3"/>
+    <circle cx="986" cy="100" r="2.2"/>
+    <circle cx="975" cy="100" r="1.5"/>
+  </g>
+
+  <!-- Separator lines around main text -->
+  <rect x="280" y="70" width="640" height="1" fill="url(#orangeGrad)" opacity="0.5"/>
+  <rect x="280" y="130" width="640" height="1" fill="url(#tealGrad)" opacity="0.4"/>
+
+  <!-- Main title text -->
+  <text
+    x="600"
+    y="108"
+    text-anchor="middle"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="2"
+    fill="#ffffff"
+    filter="url(#glow)"
+  >GUÍA DE PANTALLAS TFT</text>
+  
+  <!-- Subtitle -->
+  <text
+    x="600"
+    y="85"
+    text-anchor="middle"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="11"
+    font-weight="500"
+    letter-spacing="3"
+    fill="#00d4aa"
+    opacity="0.9"
+  >ARDUINO DAY 2026 • ARMENIA, COLOMBIA</text>
+
+  <!-- Bottom decorative circuit dots -->
+  <g fill="#00d4aa" opacity="0.3" filter="url(#subtleGlow)">
+    <circle cx="540" cy="150" r="1.5"/>
+    <circle cx="560" cy="150" r="1.5"/>
+    <circle cx="580" cy="150" r="1.5"/>
+    <circle cx="600" cy="150" r="2"/>
+    <circle cx="620" cy="150" r="1.5"/>
+    <circle cx="640" cy="150" r="1.5"/>
+    <circle cx="660" cy="150" r="1.5"/>
+  </g>
+
+  <!-- Additional decorative elements -->
+  <g opacity="0.2">
+    <circle cx="100" cy="100" r="1" fill="#00d4aa"/>
+    <circle cx="1100" cy="100" r="1" fill="#00bfff"/>
+  </g>
+
+</svg>

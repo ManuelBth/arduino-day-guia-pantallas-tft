@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="80" viewBox="0 0 1200 80">
+  <defs>
+    <!-- Background gradient - matching header colors -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#0d1b2a"/>
+      <stop offset="100%" style="stop-color:#0a0e1a"/>
+    </linearGradient>
+    
+    <!-- Teal gradient for accents -->
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:0"/>
+      <stop offset="30%" style="stop-color:#00d4aa;stop-opacity:1"/>
+      <stop offset="70%" style="stop-color:#00bfff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#00bfff;stop-opacity:0"/>
+    </linearGradient>
+    
+    <!-- Red-orange gradient for bottom accent -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#ff6b35;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:0"/>
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="subtleGlow">
+      <feGaussianBlur stdDeviation="0.8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="80" fill="url(#bgGrad)"/>
+
+  <!-- Left vertical accent (teal) -->
+  <rect x="0" y="0" width="3" height="80" fill="#00d4aa" opacity="0.5"/>
+
+  <!-- Right vertical accent (cyan) -->
+  <rect x="1197" y="0" width="3" height="80" fill="#00bfff" opacity="0.5"/>
+
+  <!-- Top accent line (teal) -->
+  <rect x="0" y="0" width="1200" height="2" fill="url(#tealGrad)" opacity="0.8"/>
+
+  <!-- Bottom accent line (orange-red) -->
+  <rect x="0" y="78" width="1200" height="2" fill="url(#orangeGrad)" opacity="0.8"/>
+
+  <!-- Corner brackets - top left -->
+  <g stroke="#00d4aa" stroke-width="1.5" fill="none" opacity="0.8" filter="url(#subtleGlow)">
+    <polyline points="12,6 6,6 6,18"/>
+  </g>
+
+  <!-- Corner brackets - top right -->
+  <g stroke="#00bfff" stroke-width="1.5" fill="none" opacity="0.8" filter="url(#subtleGlow)">
+    <polyline points="1188,6 1194,6 1194,18"/>
+  </g>
+
+  <!-- Corner brackets - bottom left -->
+  <g stroke="#ff6b35" stroke-width="1.5" fill="none" opacity="0.8" filter="url(#subtleGlow)">
+    <polyline points="12,74 6,74 6,62"/>
+  </g>
+
+  <!-- Corner brackets - bottom right -->
+  <g stroke="#ff6b35" stroke-width="1.5" fill="none" opacity="0.8" filter="url(#subtleGlow)">
+    <polyline points="1188,74 1194,74 1194,62"/>
+  </g>
+
+  <!-- Separator lines around text -->
+  <rect x="280" y="25" width="640" height="1" fill="url(#orangeGrad)" opacity="0.4"/>
+  <rect x="280" y="55" width="640" height="1" fill="url(#tealGrad)" opacity="0.4"/>
+
+  <!-- Main text -->
+  <text
+    x="600"
+    y="45"
+    text-anchor="middle"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="12"
+    font-weight="600"
+    letter-spacing="1.5"
+    fill="#ffffff"
+    filter="url(#glow)"
+  >Creado por y para la comunidad  ·  Armenia, Colombia  ·  Arduino Day 2026</text>
+
+  <!-- Decorative dots -->
+  <g fill="#00d4aa" opacity="0.4" filter="url(#subtleGlow)">
+    <circle cx="540" cy="65" r="1.2"/>
+    <circle cx="560" cy="65" r="1.2"/>
+    <circle cx="580" cy="65" r="1.2"/>
+    <circle cx="600" cy="65" r="2"/>
+    <circle cx="620" cy="65" r="1.2"/>
+    <circle cx="640" cy="65" r="1.2"/>
+    <circle cx="660" cy="65" r="1.2"/>
+  </g>
+
+</svg>
