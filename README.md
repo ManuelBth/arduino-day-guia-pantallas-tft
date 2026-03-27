@@ -97,21 +97,33 @@ sudo apt install code
 
 ---
 
-### 2. Instalacion de PlatformIO
+### 2. Instalación de PlatformIO
+
+PlatformIO es un ecosistema integrado para desarrollo de IoT. Nos permitirá compilar y subir código al ESP32 de forma sencilla.
 
 #### Windows, Linux y macOS
 1. Abre **VSCode**
-2. Ve a las **Extensiones** (Ctrl+Shift+X / Cmd+Shift+X)
-3. Busca **PlatformIO IDE**
-4. Haz clic en **Instalar**
-5. Espera a que complete la instalación (puede tomar varios minutos)
-6. Reinicia VSCode cuando termine
+2. Ve a las **Extensiones**:
+   - Windows: `Ctrl + Shift + X`
+   - macOS: `Cmd + Shift + X`
+3. En el campo de búsqueda, escribe **"PlatformIO IDE"**
+4. En los resultados, busca la extensión llamada **"PlatformIO IDE"** (de PlatformIO)
+5. Haz clic en el botón verde **"Install"** (Instalar)
+6. **Esperea** a que termine la instalación (puede tomar entre 2-5 minutos)
+7. Cuando termine, verás un mensaje para reiniciar VSCode
+8. Haz clic en **"Reload"** o reinicia VSCode manualmente
 
-> **Nota:** PlatformIO requiere aproximadamente 500MB de espacio en disco para las dependencias.
+#### Verificar instalación
+Una vez reiniciado VSCode:
+1. En la barra lateral izquierda, debería aparecer el icono de **PlatformIO** (un hormiga con un casco)
+2. También puedes escribir `PlatformIO: Home` en la paleta de comandos (`Ctrl + Shift + P` / `Cmd + Shift + P`)
+3. Si se abre la página de inicio de PlatformIO, ¡la instalación fue exitosa!
+
+> **Nota:** PlatformIO requiere aproximadamente **500MB** de espacio en disco para las dependencias. Asegúrate de tener espacio disponible antes de instalar.
 
 ---
 
-### 3. Instalacion de EEZ Studio
+### 3. Instalación de EEZ Studio
 
 EEZ Studio es una herramienta gratuita de código abierto para diseñar interfaces LVGL visualmente.
 
